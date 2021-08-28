@@ -35,9 +35,9 @@ function presionarTecla() {
 
 function urlChecker() {
   if (DomStuff.inputCity.value != "") {
-    url = `http://api.openweathermap.org/data/2.5/weather?q=${DomStuff.inputCity.value}&units=metric&appid=${myKey}&lang=es`;
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${DomStuff.inputCity.value}&units=metric&appid=${myKey}&lang=es`;
   } else {
-    url = `http://api.openweathermap.org/data/2.5/weather?q=azua&units=metric&appid=${myKey}&lang=es`;
+    url = `https://api.openweathermap.org/data/2.5/weather?q=azua&units=metric&appid=${myKey}&lang=es`;
   }
 
   return url;
