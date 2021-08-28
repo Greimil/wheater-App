@@ -35,9 +35,9 @@ function presionarTecla() {
 
 function urlChecker() {
   if (DomStuff.inputCity.value != "") {
-    url = `https://api.openweathermap.org/data/2.5/weather?q=${DomStuff.inputCity.value}&units=metric&appid=${myKey}&lang=es`;
+    url = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${DomStuff.inputCity.value}&units=metric&appid=${myKey}&lang=es`;
   } else {
-    url = `https://api.openweathermap.org/data/2.5/weather?q=azua&units=metric&appid=${myKey}&lang=es`;
+    url = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=azua&units=metric&appid=${myKey}&lang=es`;
   }
 
   return url;
