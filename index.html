@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wheather App</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="input__section">
+        <input type="text" placeholder="Buscar ciudad" id="inputCity" />
+        <span class="material-icons-sharp icono" id="icono" accesskey="U+000D">
+          search
+        </span>
+      </div>
+      <div class="info_section">
+        <p id="clima"></p>
+        <p id="localizacion"></p>
+        <div class="flex_container">
+          <div id="temperatura"></div>
+          <div class="infoGeneral">
+            <p id="sensacion">Sensacion Termica:</p>
+            <p id="viento">Viento:</p>
+            <p id="humedad">Humedad:</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <a href="https://github.com/Greimil" target="_blank"
+          >Create by Greimil</a
+        >
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
