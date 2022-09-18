@@ -2,7 +2,7 @@ const DomStuff = {
   inputCity: document.getElementById("inputCity"),
   clima: document.getElementById("clima"),
   location: document.getElementById("localizacion"),
-  temp: document.getElementById("temperatura"),
+  temp: document.getElementById("info"),
   sensacion: document.getElementById("sensacion"),
   viento: document.getElementById("viento"),
   humedad: document.getElementById("humedad"),
@@ -35,9 +35,9 @@ function presionarTecla() {
 
 function urlChecker() {
   if (DomStuff.inputCity.value != "") {
-    url = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${DomStuff.inputCity.value}&units=metric&appid=${myKey}&lang=es`;
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${DomStuff.inputCity.value}&units=metric&appid=${myKey}&lang=es`;
   } else {
-    url = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=azua&units=metric&appid=${myKey}&lang=es`;
+    url = `https://api.openweathermap.org/data/2.5/weather?q=azua&units=metric&appid=${myKey}&lang=es`;
   }
 
   return url;
@@ -55,9 +55,13 @@ const changeDomStuff = (respu) => {
   resetField();
   DomStuff.clima.textContent = respu.weather[0].main;
   DomStuff.location.textContent = respu.name + ", " + respu.sys.country;
-  DomStuff.temp.innerHTML = `<p>${
-    Math.round(respu.main.temp * 10) / 10
-  } <span id="celcius">°C<span> </p>`;
+  
+
+  DomStuff.temp.innerHTML= `${Math.round(respu.main.temp * 10) / 10} <span id="celcius">°C<span> ` 
+  
+
+
+
   DomStuff.sensacion.innerHTML = `${DomStuff.sensacion.textContent} ${
     Math.round(respu.main.feels_like * 10) / 10
   }<span id="celciuspe">°C<span> `;
